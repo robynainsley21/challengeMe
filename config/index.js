@@ -10,10 +10,8 @@ let connection = createPool({
   connectionLimit: 30,
 });
 
-connection.on('connection', (pool) => {
-    if(!pool) throw new Error('Database connection failed');
-})
+connection.on("connection", (pool) => {
+  if (!pool) throw new Error("Database connection failed");
+});
 
-export {
-    connection
-}
+export { connection };
